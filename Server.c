@@ -18,7 +18,7 @@ void* SendFileToClient(int *arg)
 {	
 	int connectionfd=(int)*arg;
 	printf("connection is accepted and id is %d\n",connectionfd);
-	printf("connected to client %s:%d\m", inet_ntoa(c_addr.sin_addr),ntohs(c_addr.sin_port));
+	printf("connected to client %s:%d\n", inet_ntoa(c_addr.sin_addr),ntohs(c_addr.sin_port));
 	write (connectionfd , fname ,256);
 	
 	FILE *fp = fopen(fname,"rb");
